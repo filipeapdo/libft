@@ -6,7 +6,7 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 11:04:23 by fiaparec          #+#    #+#             */
-/*   Updated: 2022/04/02 10:05:53 by fiaparec         ###   ########.fr       */
+/*   Updated: 2022/04/02 10:34:13 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define BUFFER_SIZE 42
+
+// libft base
 // mem functions
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
@@ -57,5 +60,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+// gnl
+char	*get_next_line(int fd);
+char	*gnl_join(char *s1, const char *s2);
 
 #endif
