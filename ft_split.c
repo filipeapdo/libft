@@ -6,13 +6,13 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 21:31:09 by fiaparec          #+#    #+#             */
-/*   Updated: 2022/02/26 06:36:38 by fiaparec         ###   ########.fr       */
+/*   Updated: 2022/04/02 10:21:15 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	flp_cnt_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int		cnt;
 	int		isword;
@@ -33,7 +33,7 @@ static int	flp_cnt_words(char const *s, char c)
 	return (cnt);
 }
 
-static void	flp_split_words(char **arr_split, char const *s, char c)
+static void	split_words(char **arr_split, char const *s, char c)
 {
 	int		i;
 	int		word_st;
@@ -62,10 +62,10 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	words_cnt = flp_cnt_words(s, c);
+	words_cnt = count_words(s, c);
 	arr_split = (char **)malloc(sizeof(char *) * (words_cnt + 1));
 	if (!arr_split)
 		return (NULL);
-	flp_split_words(arr_split, s, c);
+	split_words(arr_split, s, c);
 	return (arr_split);
 }

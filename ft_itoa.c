@@ -6,13 +6,13 @@
 /*   By: fiaparec <fiaparec@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 19:26:50 by fiaparec          #+#    #+#             */
-/*   Updated: 2022/02/26 06:36:38 by fiaparec         ###   ########.fr       */
+/*   Updated: 2022/04/02 10:20:28 by fiaparec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	flp_intlen(int n)
+static int	check_length(int n)
 {
 	int	len;
 
@@ -33,7 +33,7 @@ char	*ft_itoa(int n)
 	int		len;
 	char	*nptr;
 
-	len = flp_intlen(n);
+	len = check_length(n);
 	nptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!nptr)
 		return (NULL);
